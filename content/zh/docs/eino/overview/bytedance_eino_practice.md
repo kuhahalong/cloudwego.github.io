@@ -294,7 +294,7 @@ Eino 智能助手：从 Eino 知识库 检索必要的信息，并根据用户�
 
 - 创建 doubao-embedding-large 作为知识库构建时的向量化模型，以及创建  doubao-pro-4k 资源作为 agent 对话时的模型。
 - 「火山引擎在线推理」：[https://console.volcengine.com/ark/region](https://console.volcengine.com/ark/region):ark+cn-beijing/endpoint?config=%7B%7D
-  ![](/img/eino/RMQMbX8GHo6gr6xMYsuc1Mu6n43.png)
+  ![](/img/eino/model_create.gif)
 
 #### 启动 Redis Stack
 
@@ -312,7 +312,7 @@ cd xxx/eino-examples/quickstart/eino_assistant
 docker-compose up -d
 ```
 
-![](/img/eino/Mi8HbHVBhoyR91xlnqmcx56Vncf.png)
+![](/img/eino/redis_start_up.gif)
 
 - 完成启动后，打开本地的 8001 可进入 redis stack 的 web 界面
 
@@ -380,7 +380,7 @@ docker-compose up -d
 
 > PS: 示例项目中，已经内置了 eino 的一部分文档向量化到 redis 中
 
-1. 在 .env 文件中按照环境变量的注释说明，获取并填写 ARK_EMBEDDING_MODEL 和 ARK_API_KEY 的值，按如下指令，运行 KnowledgeIndexing 指令
+1. 在 .env 文件中按照注释说明，获取并填写 ARK_EMBEDDING_MODEL 和 ARK_API_KEY 的值，按如下指令，运行 KnowledgeIndexing 指令
 
 ```bash
 cd xxx/eino-examples/quickstart/eino_assistant # 进入 eino assistant 的 example 中
@@ -392,13 +392,13 @@ cd cmd/knowledgeindexing
 go run main.go
 ```
 
-![](/img/eino/Qy30b0Z9roZfInxVxdwcSSL6n1d.png)
+![](/img/eino/knowledgeindexing.gif)
 
-- index 完成后，可以在 redis web ui 中看到向量化之后的内容
+1. 执行运行成功后，即完成 Eino 知识库的构建，可在 Redis Web UI 中看到向量化之后的内容
 
 > 在浏览器打开链接： [http://127.0.0.1:8001](http://127.0.0.1:8001)
 
-![](/img/eino/EfkHb7xtoo7dVhxolx7c6faVnWf.png)
+![](/img/eino/redis_keys.jpeg)
 
 ### Eino 智能体
 
@@ -475,7 +475,7 @@ go run main.go
 
 #### 运行
 
-1. 在 .env 文件中按照环境变量的注释说明，获取并填写对应的信息，按如下指令，可启动 Eino Agent Server
+1. 在 .env 文件中按照注释说明，获取并填写对应各变量的值，按如下指令，启动 Eino Agent Server
 
 ```bash
 cd eino-examples/eino_assistant # 进入 eino assistant 的 example 中
@@ -486,7 +486,7 @@ source .env
 go build -o einoagent cmd/einoagent/main.go && ./einoagent
 ```
 
-![](/img/eino/BYUKbIgtKoL4DaxUBoScPpX4nkd.png)
+![](/img/eino/eino_agent.gif)
 
 1. 启动后可访问如下链接，打开 Eino Agent Web
 
@@ -495,7 +495,7 @@ go build -o einoagent cmd/einoagent/main.go && ./einoagent
 #### 观测(可选)
 
 如果在运行时，在 .env 文件中指定了 LANGFUSE_PUBLIC_KEY 和 LANGFUSE_SECRET_KEY，便可在 Langfuse 平台中，登录对应的账号，查看请求的 Trace 详情。
-![](/img/eino/PBDJbCObOoSzBKxWB16c0i0En1g.png)
+![](/img/eino/langfuse_callback.gif)
 
 ## 相关链接
 

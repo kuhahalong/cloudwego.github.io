@@ -312,4 +312,4 @@ demo 实现了一个简单的 ReAct Agent，包含 ChatTemplate、ChatModel、La
 ### 安装插件出现报错
 
 尝试升级 GoLand 到较新版本
-![](/img/eino/NduFbGfULovqZLxQKKfc8ovJnfg.png)
+![](/img/eino/img_v3_02gq_fc0bb51b-7a5b-4dfa-ad72-37e232839e6g.jpg)
