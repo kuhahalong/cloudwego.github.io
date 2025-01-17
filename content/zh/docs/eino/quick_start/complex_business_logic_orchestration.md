@@ -10,7 +10,7 @@ weight: 4
 ## **使用 Chain 优雅地组织代码**
 
 > 💡
-> 本文中示例的代码片段详见：[eino-examples/quickstart/legalchain](https://github.com/cloudwego/eino-examples/blob/main/quickstart/legalchain/main.go)
+> 本文中示例的代码片段详见：[eino-examples/quickstart/legalchain](https://github.com/cloudwego/eino-examples/blob/main/quickstart/legalchain/main.go)eino-examples/quickstart/legalchain
 
 ## **什么是 Chain？**
 
@@ -50,7 +50,7 @@ resp, err := chatModel.Generate(ctx, messages)
 
 - 用清晰的结构定义处理流程，代码更**清晰易读**
 - 轻松添加调试日志，查看每个节点的输入输出
-  - 可参考 [Eino: 公共切面 - Callbacks](/zh/docs/eino/core_modules/chain_and_graph_orchestration/callbacks_common_aspects) 和 [Eino IDE 插件使用指南](/zh/docs/eino/core_modules/application_development_toolchain/ide_plugin_guide)
+  - 可参考 [Eino: 公共切面 - Callbacks](/zh/docs/eino/core_modules/chain_and_graph_orchestration/callbacks_common_aspects) 和 [Eino IDE 插件使用指南](/zh/docs/eino/core_modules/devops/ide_plugin_guide)
 - 添加通用的切面能力，比如 tracing、metrics 等
   - 更多详细信息可以参考： [Eino: 公共切面 - Callbacks](/zh/docs/eino/core_modules/chain_and_graph_orchestration/callbacks_common_aspects)
 - **复用**已有的处理流程，在此基础上扩展新功能 (把流程拆分成可复用的组件)
@@ -178,7 +178,7 @@ Chain 有一些特征：
 
 编排能力解决了复杂逻辑开发过程中的一部分复杂性，但依然在调试时具备复杂性，因此，我们也提供了 `eino-dev` 的工具，能够可视化的查看编排的情况。
 
-> 更多详细信息可以查看： [Eino IDE 插件使用指南](/zh/docs/eino/core_modules/application_development_toolchain/ide_plugin_guide)
+> 更多详细信息可以查看： [Eino IDE 插件使用指南](/zh/docs/eino/core_modules/devops/ide_plugin_guide)
 
 ## 其他编排方式
 

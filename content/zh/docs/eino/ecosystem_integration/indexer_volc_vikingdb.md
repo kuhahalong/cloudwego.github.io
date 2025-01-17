@@ -174,4 +174,4 @@ func main() {
 
 - [Eino: Indexer 使用说明](/zh/docs/eino/core_modules/components/indexer_guide)
 - [Eino: Retriever 使用说明](/zh/docs/eino/core_modules/components/retriever_guide)
-- [火山引擎 VikingDB 使用指南](https://www.volcengine.com/docs/84313/1254617)
+- [火山引擎 VikingDB 使用指南](https://www.volcengine.com/docs/84313/1254617)火山引擎 VikingDB 使用指南

@@ -167,4 +167,4 @@ func main() {
 ## **相关文档**
 
 - [Eino: Retriever 使用说明](/zh/docs/eino/core_modules/components/retriever_guide)
-- [火山引擎 VikingDB 文档](https://www.volcengine.com/docs/84313)
+- [火山引擎 VikingDB 文档](https://www.volcengine.com/docs/84313)火山引擎 VikingDB 文档

@@ -501,7 +501,7 @@ go build -o einoagent cmd/einoagent/main.go && ./einoagent
 
 项目地址：[https://github.com/cloudwego/eino](https://github.com/cloudwego/eino)，[https://github.com/cloudwego/eino-ext](https://github.com/cloudwego/eino-ext)
 
-项目官网：<u>[https://www.cloudwego.io](https://www.cloudwego.io)</u>
+项目官网：__[https://www.cloudwego.io](https://www.cloudwego.io)__
 
 扫描二维码加入飞书社群：
 ![](/img/eino/HRpebN4nMoIxGOxrKVJcdToXnzh.png)

@@ -308,7 +308,7 @@ var callbackHandler1 = &callbacks.HandlerBuilder{
 }
 ```
 
-1. 按照 [切面注入](/zh/docs/eino/core_modules/chain_and_graph_orchestration/callbacks_common_aspects) 章节，选择合适的方式，将定制的消费切面注入到 Graph/Chain 即可
+1. 按照 [切面注入](/zh/docs/eino/core_modules/chain_and_graph_orchestration/callbacks_common_aspects)切面注入 章节，选择合适的方式，将定制的消费切面注入到 Graph/Chain 即可
 
 #### WARN:Callback 流切记要 Close
 
@@ -393,7 +393,7 @@ func (cm *ChatModel) Generate(ctx context.Context, in []*schema.Message, opts ..
 }
 ```
 
-注：当涉及到流式数据的切面上报时，需要将原来的流，Copy 出两份，一份作为输出，一份留作为 Callback 消费（CallbackManager 会根据 Callback Handler 的数量再次进行 Copy）。 针对流的相关操作，可参考 [Stream 流](/zh/docs/eino/overview) 章节
+注：当涉及到流式数据的切面上报时，需要将原来的流，Copy 出两份，一份作为输出，一份留作为 Callback 消费（CallbackManager 会根据 Callback Handler 的数量再次进行 Copy）。 针对流的相关操作，可参考 [Stream 流](/zh/docs/eino/overview) Stream 流 章节
 
 ## 常见问题
 
