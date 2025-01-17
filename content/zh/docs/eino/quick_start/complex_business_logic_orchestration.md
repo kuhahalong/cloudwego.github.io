@@ -1,6 +1,6 @@
 ---
 Description: ""
-date: "2025-01-16"
+date: "2025-01-17"
 lastmod: ""
 tags: []
 title: 复杂业务逻辑的利器-编排
@@ -113,7 +113,7 @@ func main() {
         // 并行节点，用于同时准备多个参数
         AppendParallel(compose.NewParallel().
             // 透传 query 参数
-            AddLambda("query", compose.InvokableLambda(func(ctx context.Context, input string) (string, error) {
+            AddPassthrough("query", compose.WithNodeName("PassthroughQuery")).AddLambda("query", compose.InvokableLambda(func(ctx context.Context, input string) (string, error) {
                 return input, nil
             }), compose.WithNodeName("PassthroughQuery")).
             // 处理上下文信息

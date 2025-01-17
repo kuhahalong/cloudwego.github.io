@@ -1,6 +1,6 @@
 ---
 Description: ""
-date: "2025-01-16"
+date: "2025-01-17"
 lastmod: ""
 tags: []
 title: 'Eino: 概述'
@@ -23,8 +23,6 @@ Eino 可在 AI 应用开发周期中的不同阶段，规范、简化和提效�
 - Debugging: 可对图编排的应用，进行可视化的开发调试
 - Deployment: 提供丰富的对 AI 应用的评测能力
 - Maintenance: 提供丰富的切面对 AI 应用进行观测、监控
-
-![](/img/eino/eino_project_structure_and_modules.png)
 
 完整 API Reference：[https://pkg.go.dev/github.com/cloudwego/eino](https://pkg.go.dev/github.com/cloudwego/eino)
 
@@ -82,6 +80,8 @@ runnable.Stream(ctx, []*Message{UserMessage("help me plan my weekend")})
 ```
 
 现在，我们来创建一个 Workflow，它能在字段级别灵活映射输入与输出：
+
+![](/img/eino/RHn3wNtSGhGAoyb5iF1cKZqDnKf.png)
 
 ```go
 wf := NewWorkflow[[]*Message, *Message]()
@@ -498,7 +498,7 @@ func (g *graph) AddBranch(startNode string, branch *GraphBranch) (err error) {}
 ###### **Parallel**
 
 - 将多个 Node 平行并联， 形成多个节点并发执行的节点
-- 无 AddParallel 方法，通过 AddEdge 构建并联的多条拓扑路径，以次形成 **Parallel **
+- 无 AddParallel 方法，通过 AddEdge 构建并联的多条拓扑路径，以此形成 **Parallel **
 
 ![](/img/eino/input_keys_output_keys_in_parallel.png)
 

@@ -1,6 +1,6 @@
 ---
 Description: ""
-date: "2025-01-07"
+date: "2025-01-17"
 lastmod: ""
 tags: []
 title: Agent-让大模型拥有双手
@@ -111,21 +111,16 @@ func (lt *ListTodoTool) InvokableRun(ctx context.Context, argumentsInJSON string
 
 ### **方式四：使用官方封装的工具**
 
-除了自己实现工具，我们还提供了许多开箱即用的工具。这些工具经过充分测试和优化，可以直接集成到你的 Agent 中。以 Google Search 工具为例：
+除了自己实现工具，我们还提供了许多开箱即用的工具。这些工具经过充分测试和优化，可以直接集成到你的 Agent 中。以 duckduckgo Search 工具为例：
 
 ```go
 import (
-    "github.com/bytedance/eino-ext/components/tool/googlesearch"
+    "github.com/bytedance/eino-ext/components/tool/duckduckgo"
 )
 
 func main() {
-    // 创建 Google Search 工具
-    searchTool, err := googlesearch.NewGoogleSearchTool(ctx, &googlesearch.Config{
-        APIKey:         os.Getenv("GOOGLE_API_KEY"),         // Google API Key
-        SearchEngineID: os.Getenv("GOOGLE_SEARCH_ENGINE_ID"), // 自定义搜索引擎 ID
-        Num:           5,      // 每次返回的结果数量
-        Lang:          "zh-CN", // 搜索结果的语言
-    })
+    // 创建 duckduckgo Search 工具
+    searchTool, err := duckduckgo.NewTool(ctx, &duckduckgo.Config{})
     if err != nil {
         log.Fatal(err)
     }
@@ -157,7 +152,7 @@ func main() {
     todoTools := []tool.BaseTool{
         getAddTodoTool(),                                // 使用 NewTool 方式
         updateTool,                                     // 使用 InferTool 方式
-        &ListTodoTool{},
+        &ListTodoTool{},                                // 使用结构体实现方式, 此处未实现底层逻辑
         searchTool,                                 // 使用结构体实现方式, 此处未实现底层逻辑
     }
 
@@ -198,7 +193,7 @@ func main() {
     }
 
     // 构建完整的处理链
-    chain := compose.NewChain[*schema.Message, []*schema.Message]()
+    chain := compose.NewChain[[]*schema.Message, []*schema.Message]()
     chain.
         AppendChatModel(chatModel, compose.WithNodeName("chat_model")).
         AppendToolsNode(todoToolsNode, compose.WithNodeName("tools"))
@@ -210,8 +205,11 @@ func main() {
     }
 
     // 运行示例
-    resp, err := agent.Invoke(context.Background(), &schema.Message{
-        Content: "帮我创建一个明天下午3点截止的待办事项：准备Eino项目演示文稿",
+    resp, err := agent.Invoke(ctx, []*schema.Message{
+        {
+           Role:    schema.User,
+           Content: "添加一个学习 Eino 的 TODO，同时搜索一下 cloudwego/eino 的仓库地址",
+        },
     })
     if err != nil {
         log.Fatal(err)
