@@ -41,11 +41,11 @@ weight: 0
 
 ### Indexer
 
-- volc vikingdb: [[🚧]Indexer - volc VikingDB](/zh/docs/eino/ecosystem_integration/indexer_volc_vikingdb)
+- volc vikingdb: [[🚧]Indexer - volc VikingDB](/zh/docs/eino/ecosystem_integration/Indexer/Indexer - volc VikingDB)
 
 ### Retriever
 
-- volc vikingdb: [[🚧]Retriever - volc VikingDB](/zh/docs/eino/ecosystem_integration/retriever_volc_vikingdb)
+- volc vikingdb: [[🚧]Retriever - volc VikingDB](https://bytedance.larkoffice.com/wiki/L9uVwH4NpiF8NzkMVxocFJ3dneg)
 
 ### Tools
 

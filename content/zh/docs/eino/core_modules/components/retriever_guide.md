@@ -174,7 +174,7 @@ result, err := runnable.Invoke(ctx, "查询内容", compose.WithCallbacks(helper
 
 ## **已有实现**
 
-- Volc VikingDB Retriever: 基于火山引擎 VikingDB 的检索实现 [Retriever - VikingDB](/zh/docs/eino/ecosystem_integration/retriever_volc_vikingdb)
+- Volc VikingDB Retriever: 基于火山引擎 VikingDB 的检索实现 [Retriever - VikingDB](https://bytedance.larkoffice.com/wiki/L9uVwH4NpiF8NzkMVxocFJ3dneg)
 
 ## **自行实现参考**
 
