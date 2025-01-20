@@ -1,6 +1,6 @@
 ---
 Description: ""
-date: "2025-01-17"
+date: "2025-01-20"
 lastmod: ""
 tags: []
 title: 字节跳动大模型应用 Go 开发框架 —— Eino 实践
@@ -122,7 +122,7 @@ runnable.Stream(ctx, []*Message{UserMessage("help me plan my weekend")})
 
 Workflow，如大量自定义 Lambda function 之间的灵活映射：
 
-[https://bytedance.larkoffice.com/sync/GhDOdndVEsNrL5bn3p1c5yCwnqh](https://bytedance.larkoffice.com/sync/GhDOdndVEsNrL5bn3p1c5yCwnqh)
+![](/img/eino/PFpuwEsHghSDeIbqAM5cur0nn9d.png)
 
 ```go
 wf := NewWorkflow[[]*Message, *Message]()
@@ -220,19 +220,19 @@ Eino 编排能力会自动做两个重要的事情：
 
 ### 场景设定
 
-Eino 智能助手：从 Eino 知识库 检索必要的信息，并根据用户请求的语义场，按需调用和执行互联网搜索工具(DuckDuckGo)、EinoTool、GitClone、任务管理(TaskManager)、 OpenURL 等多种工具，以完成对用户的请求的处理。
+Eino 智能助手：根据用户请求，从知识库检索必要的信息并按需调用多种工具，以完成对用户的请求的处理。工具列表如下：
 
 - DuckDuckGo：从 DuckDuckGo 搜索互联网信息
-- EinoTool：获取 Eino 的工程信息，比如仓库链接、文档链接 等
+- EinoTool：获取 Eino 的工程信息，比如仓库链接、文档链接等
 - GitClone：克隆指定仓库到本地
 - 任务管理(TaskManager)：添加、查看、删除 任务
 - OpenURL：使用系统的默认应用打开文件、Web 等类型的链接
 
-本文主要呈现一个 Demo 样例，用户可根据自己的场景，更换自己的 知识库 和 工具，以搭建自己所需的智能助手。
+本文主要呈现一个 Demo 样例，用户可根据自己的场景，更换自己的知识库和工具，以搭建自己所需的智能助手。
 
 先来一起看看**这个 5 分钟搭建起来的** Agent 助手能实现什么效果
 
-欲构建 Eino 智能助手，需将任务拆分成如下两步：
+我们分两步来构建这个 Eino 智能助手：
 
 - Knowledge Indexing（索引知识库）：将我们在特定领域沉淀的知识，以分词、向量化等多种手段，构建成索引，以便在接收用户请求时，索引出合适的上下文。 本文采用向量化索引来构建知识库。
 - Eino Agent（Eino 智能助手）：根据用户的请求信息以及我们预先构建好的可调用的工具，让 ChatModel 帮我们决策下一步应该执行什么动作或输出最终结果。Tool 的执行结果会再次输入给 ChatModel，让 ChatModel 再一次判断下一步的动作，直至完成用户的请求。
@@ -241,19 +241,19 @@ Eino 智能助手：从 Eino 知识库 检索必要的信息，并根据用户�
 
 #### **索引知识库(Knowledge Indexing)**
 
-将 Markdown 格式的 Eino 用户手册，以合适的策略进行拆分和向量化，存入到 RedisSearch 的 VectorStore 中，作为 Eino 知识库
+将 Markdown 格式的 Eino 用户手册，以合适的策略进行拆分和向量化，存入到 RedisSearch 的 VectorStore 中，作为 Eino 知识库。
 
 ![](/img/eino/eino_practice_index_flow.png)
 
 #### **Eino 智能体(Eino Agent)**
 
-根据用户请求，从 Eino 知识库召回信息，采用 Chat Template 构建消息，请求 React Agent，视需求循环调用对应工具，直至完成处理用户的请求。
+根据用户请求，从 Eino 知识库召回信息，采用 ChatTemplate 构建消息，请求 React Agent，视需求循环调用对应工具，直至完成处理用户的请求。
 
 ![](/img/eino/FnMpwReaihcgScbAMpLcpqEtnRe.png)
 
 ### 所需工具
 
-在从零开始构建「Eino 智能助手」这个实践场景中，会涉及使用以下几种工具：
+在从零开始构建「Eino 智能助手」这个实践场景中，需要下列工具：
 
 <table>
 <tr>
@@ -483,6 +483,7 @@ cd eino-examples/eino_assistant # 进入 eino assistant 的 example 中
 # 修改 .env 中所需的环境变量 (大模型信息、trace 平台信息)
 source .env
 
+# 为了使用 data 目录，需要在 eino_assistant 目录下执行指令
 go build -o einoagent cmd/einoagent/main.go && ./einoagent
 ```
 
@@ -490,7 +491,7 @@ go build -o einoagent cmd/einoagent/main.go && ./einoagent
 
 1. 启动后可访问如下链接，打开 Eino Agent Web
 
->
+> Eino Agent Web：[http://127.0.0.1:8080/agent/](http://127.0.0.1:8080/agent/)
 
 #### 观测(可选)
 

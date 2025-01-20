@@ -1,6 +1,6 @@
 ---
 Description: ""
-date: "2025-01-17"
+date: "2025-01-20"
 lastmod: ""
 tags: []
 title: GoLand  EinoDev 插件
@@ -107,7 +107,7 @@ weight: 0
 
 ## 开始编排
 
-### 始化插件
+### 初始化插件
 
 点击进入 Eino Dev 插件，会展示如下界面，可点击图中圈选框进入编排。
 ![](/img/eino/LbntbO2kroPGKExqpG6cIAuTn1f.png)
@@ -115,9 +115,7 @@ weight: 0
 ### 创建并编排 Graph
 
 - 界面左下角新增 Graph，在弹窗对话框填写 Graph 相关配置，生成 Graph 画布。
-  - 图
 - 按需从 AddNodes  选择合适的 Node 组件，添加的画布。
-  - 图
 - 依据业务编排逻辑将 Node 组件连接，完成 Graph 业务编排逻辑。
 
 <table><tbody><tr>

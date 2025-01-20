@@ -1,6 +1,6 @@
 ---
 Description: ""
-date: "2025-01-17"
+date: "2025-01-20"
 lastmod: ""
 tags: []
 title: 可视化调试插件功能指南
@@ -104,12 +104,11 @@ go mod tidy
 
 ## 编排拓扑可视化
 
-支持 Graph 和 Chain 编排拓扑可视化，其中 Chain 会渲染成图拓扑。
+支持 Graph 和 Chain 编排拓扑可视化。
 ![](/img/eino/R8EYbfenDoeMnfxGjJ9cZ6Hjnff.png)
 
 ## 从任意节点开始调试
 
-待补充。。。。
 ![](/img/eino/UovrbOrhfooaPcxJVgvcZj8dnQe.png)
 
 ## 查看节点执行结果
