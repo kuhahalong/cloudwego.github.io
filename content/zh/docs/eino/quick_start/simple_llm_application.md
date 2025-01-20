@@ -1,6 +1,6 @@
 ---
 Description: ""
-date: "2025-01-17"
+date: "2025-01-20"
 lastmod: ""
 tags: []
 title: 实现一个最简 LLM 应用
@@ -39,9 +39,9 @@ Eino 提供了强大的模板化功能来构建要输入给大模型的消息。
 
 1. 变量占位符：在消息中插入变量，支持三种格式：
 
-   - FString: `{variable}`
-   - Jinja2: `{{variable}}`
-   - GoTemplate: `{{``.variable}}`
+   - FString: {variable}
+   - Jinja2: {{variable}}
+   - GoTemplate: {{.variable}}
 2. 消息占位符：用于插入一组消息（如对话历史）
 
 ```go
@@ -207,5 +207,3 @@ func main() {
 
 - 快速开始
   - [Agent-让大模型拥有双手](/zh/docs/eino/quick_start/agent_llm_with_tools)
-  - [和幻觉说再见-RAG 召回再回答](/zh/docs/eino/quick_start/rag_retrieval_qa)
-  - [复杂业务逻辑的利器-编排](/zh/docs/eino/quick_start/complex_business_logic_orchestration)

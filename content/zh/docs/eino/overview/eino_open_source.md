@@ -1,6 +1,6 @@
 ---
 Description: ""
-date: "2025-01-15"
+date: "2025-01-20"
 lastmod: ""
 tags: []
 title: 大语言模型应用开发框架 —— Eino 正式开源！

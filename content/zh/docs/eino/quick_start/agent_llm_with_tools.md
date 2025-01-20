@@ -1,6 +1,6 @@
 ---
 Description: ""
-date: "2025-01-17"
+date: "2025-01-20"
 lastmod: ""
 tags: []
 title: Agent-让大模型拥有双手
@@ -250,5 +250,3 @@ Agent 是 AI 技术发展的重要方向。它不仅能够理解用户意图，�
 
 - 快速开始
   - [实现一个最简 LLM 应用-ChatModel](/zh/docs/eino/quick_start/simple_llm_application)
-  - [和幻觉说再见-RAG 召回再回答](/zh/docs/eino/quick_start/rag_retrieval_qa)
-  - [复杂业务逻辑的利器-编排](/zh/docs/eino/quick_start/complex_business_logic_orchestration)

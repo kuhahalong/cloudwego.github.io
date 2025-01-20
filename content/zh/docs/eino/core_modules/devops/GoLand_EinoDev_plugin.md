@@ -16,30 +16,7 @@ weight: 0
 
 ### 插件功能介绍
 
-<table><tbody><tr>
-<td>
-<img src="/img/eino/HmEtbBGU7oy9Xsxtn1McdKARn4g.png" />
-</td>
-<td>
-
-1 - 页面重新加载
-
-2 - 中英文切换
-
-3 - 历史编排 Graph 列表
-
-4 - 新建 Graph 编排任务
-
-5 - 将编排完整的 Graph 指定目录生成 Eino Graph 代码
-
-6、7 - 导入、导出 Graph 配置 Schema 信息
-
-8 - Graph 画布功能区，包括 界面比例，撤销、优化画布布局等
-
-9 - 添加 Graph Node 到画布
-
-</td>
-</tr></tbody></table>
+![](/img/eino/P1Y5bQG0Po6kGEx2JNRc8c8Lnlh.png)
 
 ## 编排组件介绍
 
