@@ -37,15 +37,15 @@ ChatModel 是 Eino 框架中对对话大模型的抽象，它提供了统一的�
 
 Eino 提供了强大的模板化功能来构建要输入给大模型的消息。你可以使用占位符来插入变量和模板消息：
 
-1. 变量占位符：在消息中插入变量，支持三种格式：
+1. 模版渲染，支持三种模版格式：变量占位符：在消息中插入变量，支持三种格式：
 
-   - FString: {variable}
-   - Jinja2: {{variable}}
-   - GoTemplate: {{.variable}}
-2. 消息占位符：用于插入一组消息（如对话历史）
+   - _FString：Python 风格的简单字符串格式化（例如："你好，{name}！"）_FString: {variable}
+   - _Jinja2：支持丰富表达式的 Jinja2 风格模板_Jinja2: {{variable}}
+   - _GoTemplate：Go 语言内置的 text/template 格式_GoTemplate: {{.variable}}
+2. 消息占位符：支持用于插入一组消息（如对话历史）
 
 ```go
-// optional=false 表示必需的消息列表，找不到对应变量会报错
+// optional=false 表示必需的消息列表，在模版输入中找不到对应变量会报错
 schema.MessagesPlaceholder("chat_history", false)
 ```
 
