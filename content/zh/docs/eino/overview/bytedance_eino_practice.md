@@ -388,6 +388,7 @@ cd xxx/eino-examples/quickstart/eino_assistant # 进入 eino assistant 的 examp
 # 修改 .env 中所需的环境变量 (大模型信息、trace 平台信息)
 source .env
 
+# 因示例的Markdown文件存放在 cmd/knowledgeindexing/eino-docs 目录，代码中指定了相对路径 eino-docs，所以需在 cmd/knowledgeindexing 运行指令
 cd cmd/knowledgeindexing
 go run main.go
 ```
@@ -484,7 +485,7 @@ cd eino-examples/eino_assistant # 进入 eino assistant 的 example 中
 source .env
 
 # 为了使用 data 目录，需要在 eino_assistant 目录下执行指令
-go build -o einoagent cmd/einoagent/main.go && ./einoagent
+go run cmd/einoagent/*.go
 ```
 
 ![](/img/eino/eino_agent.gif)
