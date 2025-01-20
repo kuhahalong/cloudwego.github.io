@@ -4,7 +4,7 @@ date: "2025-01-20"
 lastmod: ""
 tags: []
 title: 可视化调试插件功能指南
-weight: 0
+weight: 5
 ---
 
 # 简介

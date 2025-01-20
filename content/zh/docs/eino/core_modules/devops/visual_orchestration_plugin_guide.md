@@ -4,7 +4,7 @@ date: "2025-01-20"
 lastmod: ""
 tags: []
 title: EinoDev 可视化编排插件功能指南
-weight: 0
+weight: 4
 ---
 
 # 简介
