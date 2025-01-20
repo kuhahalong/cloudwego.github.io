@@ -116,10 +116,6 @@ func main() {
     chatModel, err := openai.NewChatModel(context.Background(), &openai.ChatModelConfig{
         Model: "gpt-4o",           // 使用的模型版本
         APIKey: "<your-api-key>",   // OpenAI API 密钥
-        
-        // 可选的 Azure OpenAI 配置
-        ByAzure: true,           // 是否使用 Azure OpenAI
-        BaseURL: "<your-base-url>",
     })
     if err != nil {
         log.Fatal(err)
