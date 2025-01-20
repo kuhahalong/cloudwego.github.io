@@ -50,23 +50,31 @@ go mod tidy
 
 <table><tbody><tr>
 <td>
-1. 点击左侧或正中间调试功能进入调试配置
+
+1.点击左侧或正中间调试功能进入调试配置
 <img src="/img/eino/Cqm7bOc5aoeIAdx0Su4cTx64nnB.png" />
+
 </td>
 <td>
-1. 点击配置调试地址
+
+2.点击配置调试地址
 <img src="/img/eino/Wy7abH4QZoJzLQxAlLscmnnDnHh.png" />
+
 </td>
 </tr></tbody></table>
 
 <table><tbody><tr>
 <td>
-1. 填入 127.0.0.1:52538
+
+3.填入 127.0.0.1:52538
 <img src="/img/eino/SHvXbcIRko3tA0xUgFQcMH6Vned.png" />
+
 </td>
 <td>
-1. 点击确认进入调试界面，选择要调试的Graph
+
+4.点击确认进入调试界面，选择要调试的 Graph
 <img src="/img/eino/NAQIbC4yxoKcsRx3tmkc9ZjEnAg.png" />
+
 </td>
 </tr></tbody></table>
 
@@ -74,11 +82,14 @@ go mod tidy
 
 <table><tbody><tr>
 <td>
-1. 点击<pre>Test Run</pre>从 start 节点开始执行
+
+1.点击<pre>Test Run</pre>从 start 节点开始执行
 <img src="/img/eino/LHU1b6ULtoWRvyxkSSscwr74nBf.png" />
+
 </td>
 <td>
-1. 输入<pre>"hello eino"</pre>，点击确认
+
+2.输入<pre>"hello eino"</pre>，点击确认
 <img src="/img/eino/JfEhbOQnzoLQH9xiOB6cPDGCnLf.png" />
 
 </td>
@@ -86,12 +97,16 @@ go mod tidy
 
 <table><tbody><tr>
 <td>
-1. 在调试区域展示有各个节点的输入和输出
+
+3.在调试区域展示有各个节点的输入和输出
 <img src="/img/eino/YwZ7bNIvNo0Ab5x5BQWcLrsCnPf.png" />
+
 </td>
 <td>
-1. 点击 Input 和 Output 切换查看节点信息
+
+4.点击 Input 和 Output 切换查看节点信息
 <img src="/img/eino/B0dkbbObjoiyLixnTEvcECzBn0e.png" />
+
 </td>
 </tr></tbody></table>
 
